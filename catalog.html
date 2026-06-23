@@ -4,19 +4,20 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
     <header class="page-header">
       <a class="header-logo" href="index.html">
-        <img class="header-logo-pic" src="images/logo.svg" alt="Логотип Седона" Width="140" Height="70"></a>
+        <img class="header-logo-pic" src="images/logo.svg" alt="Логотип Седона" width="140" height="70"></a>
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="about.html">О седоне</a>
+            <a class="navigation-link" href="#">О седоне</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">Гостиницы</a>
@@ -24,14 +25,14 @@
         </ul>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
-            <a class="navigation-item" href="#"></a>
-            <img class="navigation-pic" src="images/search.svg" width="44" height="64" alt="Поиск">
-            <span class="visually-hidden">Поиск
-            </span>
+            <a class="navigation-item" href="#">
+              <span class="visually-hidden">
+                Поиск
+              </span>
+            </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-item" href="#">
-              <img class="navigation-pic" src="images/favorite.svg" width="44" height="64" alt="Избранное">
               <span class="navigation-item">12</span>
               <span class="visually-hidden">
                 Избранное
@@ -39,11 +40,7 @@
             </a>
           </li>
         </ul>
-        <a class="button" href="#">
-          <span class="visually-hidden">
-            Хочу сюда
-          </span>
-        </a>
+        <a class="button" href="#">Хочу сюда</a>
       </nav>
     </header>
     <main class="main_inner">
@@ -150,8 +147,9 @@
           <ul class="product_list">
             <li class="product-card">
               <a class="product-card-link" href="#">
-                <img class="product-card-image" src="images/hotels/Amara Resort & Spa.jpeg" alt="Звездное небо" width="300" height="212">
-                <h3 class="product-card-title">Amara Resort & Spa</h3>
+                <img class="product-card-image" src="images/hotels/Amara Resort & Spa.jpeg" alt="Звездное небо"
+                  width="300" height="212">
+                <h2 class="product-card-title">Amara Resort & Spa</h2>
               </a>
               <p class="product-card-name">Гостиница</p>
               <b class="hotel-price-value-wrapper">
@@ -173,8 +171,9 @@
             </li>
             <li class="product-card">
               <a class="product-card-link" href="#">
-                <img class="product-card-image" src="images/hotels/Villas at Poco Diablo.jpeg" alt="радуга над горами"  width="300" height="212">
-                <h3 class="product-card-title">Villas at Poco Diablo></h3>
+                <img class="product-card-image" src="images/hotels/Villas at Poco Diablo.jpeg" alt="радуга над горами"
+                  width="300" height="212">
+                <h2 class="product-card-title">Villas at Poco Diablo></h2>
               </a>
               <p class="product-card-name">Гостиница</p>
               <b class="hotel-price-value-wrapper">
@@ -195,8 +194,9 @@
               </p>
             <li class="product-card">
               <a class="product-card-link" href="#">
-                <img class="product-card-image" src="images/hotels/Desert Quail Inn.jpeg" alt="Пустыня"  width="300" height="212">
-                <h3 class="product-card-title">Desert Quail Inn</h3>
+                <img class="product-card-image" src="images/hotels/Desert Quail Inn.jpeg" alt="Пустыня" width="300"
+                  height="212">
+                <h2 class="product-card-title">Desert Quail Inn</h2>
               </a>
               <p class="product-card-name">Гостиница</p>
               <b class="hotel-price-value-wrapper">
@@ -217,7 +217,8 @@
               </p>
             <li class="product-card">
               <a class="product-card-link" href="#">
-                <img class="product-card-image" src="images/hotels/GreenTree Inn.jpeg" alt="Гора"  width="300" height="212">
+                <img class="product-card-image" src="images/hotels/GreenTree Inn.jpeg" alt="Гора" width="300"
+                  height="212">
                 <h3 class="product-card-title">GreenTree Inn</h3>
               </a>
               <p class="product-card-name">Гостиница</p>
@@ -271,28 +272,25 @@
         </section>
       </header>
     </main>
-    <footer>
-      <section class="footer-social_list">
-        <ul class="footer-social_list">
-          <li class="footer-social_item">
-            <a class="button" href="https://vk.com/htmlacademy">
-              <span class="visually_hidden">VK</span>
-            </a>
+    <footer class="footer-list">
+      <section class="footer-section">
+        <ul class="footer-social-list ">
+          <li class="footer-social-item">
+            <a class="button" href="https://vk.com/htmlacademy">Мы вконтакте</a>
+            <span class="visually-hidden"></span>
+          </li>
+          <li class="footer-social-item">
+            <a class="button" href="https://t.me/htmlacademy">Мы в телеграмм</a>
+            <span class="visually_hidden"></span>
           </li>
           <li class="footer-social_item">
-            <a class="button" href="https://t.me/htmlacademy">
-              <span class="visually_hidden">TG</span>
-            </a>
-          </li>
-          <li class="footer-social_item">
-            <a class="button" href="https://www.youtube.com/channel/UChUxTMjJGo-JDRY8pNTGL2g">
-              <span class="visually_hidden">Youtube</span>
-            </a>
+            <a class="button" href="https://www.youtube.com/channel/UChUxTMjJGo-JDRY8pNTGL2g">Мы на Ютуб</a>
+            <span class="visually_hidden"></span>
           </li>
         </ul>
-        <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        <a class="phone-number" href="tel:+78128121212">+7(812)812-12-12</a>
         <p class="about text">
-          <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">.html academy</a>
+          <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a>
         </p>
       </section>
     </footer>
