@@ -131,7 +131,7 @@ body {
   width: 120px;
   max-width: 180px;
   margin-left: auto;
-   padding: 20px 16px;
+
 }
 
 .navigation-link {
@@ -144,8 +144,6 @@ body {
   text-align: center;
   text-decoration: none;
   padding: 20px 16px;
-  margin-right: 13px;
-
 }
 
 
