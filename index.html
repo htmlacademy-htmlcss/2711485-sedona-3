@@ -31,13 +31,13 @@
             </li>
           </ul>
           <ul class="navigation-list navigation-user">
-            <li class="navigation-item">
-              <a class="navigation-item" href="#">
+            <li>
+              <a class="navigation-item-search" href="#">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
-            <li class="navigation-item">
-              <a class="navigation-item" href="#">
+            <li>
+              <a class="navigation-item-search" href="#">
                 <span class="navigation-item">12</span>
                 <span class="visually-hidden">Избранное</span>
                 <span class="visually-hidden">отелей</span>
@@ -142,22 +142,23 @@
           <h2 class="interested-title">Заинтересовались?</h2>
           <p class="interested-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения
             гостиниц в Седоне</p>
-          <button class="button-search" type="button">Поиск гостиницы в Седоне</button>
+          <button class="button button-search" type="button">Поиск гостиницы в Седоне</button>
         </section>
 
 
         <!--ПОДПИСКА НА РАССЫЛКУ-->
 
 
-        <section class="section-mail section-mail-index coll">
+        <section class="section-mail section-mail-index">
           <h2 class="mail-title">Подпишитесь на рассылку?</h2>
           <p class="mail-text mail-text-index">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
           <form class="subscribe-mail" action="https://echo.htmlacademy.ru/" method="post">
-            <label for="newsletter-email">Введите ваш e-mail</label>
+            <label class="visually-hidden" for="newsletter-email">Введите ваш e-mail</label>
             <input class="field-email" placeholder="Ваш e-mail" type="email" name="newsletter-email"
               id="newsletter-email" required>
-            <button class="button-newsletter-button" type="submit">Подписаться</button>
+            <button class="button newsletter-button" type="submit">Подписаться</button>
           </form>
+
         </section>
       </main>
 

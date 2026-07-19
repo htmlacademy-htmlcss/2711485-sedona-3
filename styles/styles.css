@@ -92,8 +92,9 @@ body {
 
 .header-logo-pic {
   display: block;
-  width: 138px;
+  width: 140px;
   height: 70px;
+  object-fit: contain;
 }
 
 .background-text {
@@ -140,6 +141,7 @@ body {
 
 }
 
+
 .navigation-link {
   display: block;
   font-size: 20px;
@@ -150,7 +152,20 @@ body {
   text-decoration: none;
   padding: 20px 16px;
 }
-
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #dbdbdb;
+}
+.navigation-item-search {
+  background-image: url("../images/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 /*Хочу Сюда*/
 
@@ -169,6 +184,7 @@ body {
   height: 36px;
   padding: 8px 34px;
   margin-top: 14px;
+  border-radius: 4px;
 
 }
 
@@ -204,6 +220,8 @@ body {
 .advantages-item {
   background-color: #82B3D3;
   display: flex;
+
+
 }
 
 .advantages-wrapper {
@@ -241,6 +259,8 @@ body {
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 60px;
+  margin-top: 0;
 }
 
 .advantages-title-sedona {
@@ -250,6 +270,8 @@ body {
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 60px;
+  margin-top: 0;
 }
 
 .advantages-text {
@@ -257,6 +279,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+  margin-bottom: 90px;
 }
 
 .advantages-description {
@@ -275,6 +298,8 @@ body {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 
@@ -340,7 +365,8 @@ body {
   text-align: center;
   text-transform: uppercase;
   margin: 0;
-  padding-bottom: 30px;
+  margin-top: 102px;
+  margin-bottom: 30px;
 }
 
 /*Заинтересовались?*/
@@ -391,20 +417,23 @@ body {
 
 /* Подписка на рассылку */
 
+
 .section-mail {
+  display: block;
   background-color: #ffffff;
   padding-top: 96px;
   padding-bottom: 104px;
   text-align: center;
+
 }
 
 
 
 .section-mail-index {
-  background-image: url(../images/backgroundmain.jpg);
+  background-image: url("../images/backgroundmain.jpg");
   background-color: #404b50;
   color: #ffffff;
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -444,32 +473,37 @@ body {
   color: #82B3D3;
   font-size: 18px;
   line-height: 24px;
-  text-align: middle;
+  margin: 0 auto;
 }
 
 
 .subscribe-mail {
+
   display: flex;
+  margin: 0 auto;
   color: #ffffff;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  width: 700px;
 }
 
 .field-email {
+
+  padding: 12px 20px;
+  font-family: inherit;
   color: #F2F2F2;
   font-size: 18px;
   line-height: 24px;
-  text-align: middle;
   width: 452px;
   height: 52px;
 }
 
 /*Кнопка подписаться*/
 
-.button-newsletter-button {
+.newsletter-button {
   font-family: "PT Sans";
   color: #ffffff;
   background-color: #82B3D3;
@@ -480,6 +514,7 @@ body {
   width: 235px;
   height: 52px;
   padding: 8px 50px;
+
 
 }
 
@@ -641,6 +676,8 @@ body {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-right: auto;
 }
 
 .select-control {
@@ -660,14 +697,18 @@ body {
 /*список гостинниц*/
 
 
+.product-card-list {
+  padding: 50px 60px;
+}
+
+
 .product-list {
   display: grid;
   grid-template-columns: repeat(3, 340px);
   gap: 20px;
   list-style: none;
   margin: 0;
-  padding-bottom: 40px;
-  margin-bottom: 40px;
+  padding: 0;
 }
 
 .product-card {
@@ -675,8 +716,9 @@ body {
   grid-template-columns: 140px 140px;
   grid-template-rows: 212px 1fr auto;
   gap: 16px 20px;
-  padding: 20px;
   border-radius: 4px;
+  padding: 20px;
+
 }
 
 .product-card-title {
@@ -730,10 +772,6 @@ body {
 }
 
 
-.product-card-list {
-  padding-top: 40px;
-}
-
 .card-img {
   display: block;
   width: 300px;
@@ -756,15 +794,20 @@ body {
   text-transform: uppercase;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .catalog-reset-btn {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 50px;
   background-color: transparent;
 }
 
 .catalog-submit-btn {
   display: block;
-  padding: 8px 34px;
+  padding: 8px 50px;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
