@@ -92,6 +92,7 @@ body {
 
 
 .header-logo-pic {
+  position: relative;
   display: block;
   width: 140px;
   height: 70px;
@@ -134,7 +135,6 @@ body {
 }
 
 .navigation-user {
-  width: 120px;
   max-width: 180px;
   margin-left: auto;
 
@@ -142,6 +142,7 @@ body {
 
 
 .navigation-link {
+  position: relative;
   display: block;
   font-size: 20px;
   line-height: 24px;
@@ -166,8 +167,7 @@ body {
   display: block;
   width: 44px;
   height: 64px;
-  margin: 0;
-  margin-left: auto;
+  margin-right: auto;
 }
 
 .navigation-item-search {
@@ -200,7 +200,7 @@ body {
   width: 160px;
   height: 36px;
   padding: 8px 34px;
-  margin-top: 14px;
+  margin: 0 auto;
   border-radius: 4px;
   margin-left: auto;
 
@@ -292,6 +292,8 @@ body {
   margin-top: 0;
 }
 
+
+
 .advantages-text {
   color: #333333;
   font-size: 22px;
@@ -357,10 +359,36 @@ body {
 
 .recommend-item {
   background-color: #83B3D31F;
-  width: 400px;
   height: 385px;
   margin: 0;
   padding: 81px 85px;
+
+}
+
+.recommend-home {
+
+  position: relative;
+  background-image: url("../images/home.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  background-position: center;
+
+
+}
+
+.recommend-food {
+  background-image: url("../images/food.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 74px 70px;
+}
+
+.recommend-gift {
+
+  background-image: url("../images/present.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 64px 76px;
 }
 
 .item {
@@ -391,7 +419,6 @@ body {
 
 .interested {
   margin: 0 auto;
-  width: 700px;
   padding-top: 96px;
   padding-bottom: 96px;
 }
@@ -550,7 +577,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
@@ -561,10 +587,12 @@ body {
 
 
 .phone-number {
+  display: block;
   color: #000000;
   font-size: 40px;
   line-height: 40px;
   justify-content: center;
+  margin: auto;
 }
 
 
@@ -667,14 +695,41 @@ body {
   border: none;
 }
 
+.social-footer {
+  display: block;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 47px 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 44px;
+  height: 24px;
+
+}
+
 .number {
+  display: block;
   color: #000000;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+  max-width: 500px;
+  width: 331px;
+  height: 40px;
+  text-decoration: none;
 
 }
 
+.page-footer-link {
+
+  display: block;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 115px 33px;
+  margin: 0;
+}
 
 /* НАЙДЕНО ГОСТИННИЦ */
 
