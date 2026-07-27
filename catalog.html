@@ -6,6 +6,7 @@
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
+<body>
 
     <!-- Шапка -->
 
@@ -19,7 +20,7 @@
 
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link" href="index.html">Главная</a>
+              <a class="navigation-link navigation-link-after" href="index.html">Главная</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">О Седоне</a>
@@ -36,7 +37,7 @@
             </li>
             <li>
               <a class="nav navigation-item-favorite" href="#">
-                <span class="navigation-item">12</span>
+                <span class="navigation-number">12</span>
                 <span class="visually-hidden">Избранное</span>
                 <span class="visually-hidden">отелей</span>
               </a>
@@ -46,6 +47,7 @@
         <a class="navigation-button" href="#">Хочу сюда!</a>
 
       </header>
+
 
 
     <!-- Гостинницы  -->
@@ -59,14 +61,13 @@
           <!-- Хлебные крошки -->
 
           <ol class="breadcrumbs">
-            <li class="breadcrumbs_item">
-              <a class="breadcrumbs-link" href="index.html">Главная
-                <span class="visually-hidden">
-                </span>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="index.html">
+                <span class="visually-hidden">Главная</span>
               </a>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link">Гостиницы</a>
+              <a class="breadcrumbs-link-main">Гостиницы</a>
             </li>
           </ol>
         </section>
@@ -117,20 +118,26 @@
             </div>
 
 
-            <div class="filter-columns filter-wrapper-right">
-              <fieldset class="catalog-filter-group filter-price">
-                <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                <label class="catalog-filter-item" for="catalog-price-from">от</label>
-                <input type="number" value="0" name="min-price" id="catalog-price-from">
-                <label for="catalog-price-to">до</label>
-                <input type="number" value="9000" name="max-price" id="catalog-price-to">
-                <input type="range" id="lower" min="0" step="1" aria-label="Смена минимальной стоимости">
-                <input type="range" id="upper" min="0" step="1" aria-label="Смена максимальной стоимости">
-              </fieldset>
-              <div class="catalog-form-button catalog-filter-wrapper">
-                <button class="button catalog-submit-btn" type="submit">Применить</button>
-                <button class="button catalog-reset-btn" type="reset">Сбросить</button>
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+              <div class="inputs-price-container">
+                <input class="field-price" name="min-price" type="number" value="0">
+                <input class="field-price" name="max-price" type="number" value="9000">
               </div>
+              <div class="range-scale">
+                <div class="range-bar">
+                  <button class="range-toggle price-toggle-min" type="button">
+                    <span class="visually-hidden">Поменять минимальную цену</span>
+                  </button>
+                  <button class="range-toggle price-toggle-max" type="button">
+                    <span class="visually-hidden">Поменять максимальную цену</span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <div class="catalog-button-container">
+              <button class="button catalog-submit-btn" type="submit">Применить</button>
+              <button class="button catalog-reset-btn " type="reset">Сбросить</button>
             </div>
           </form>
         </section>
@@ -139,21 +146,27 @@
 
 
       <section class="catalog-product coll">
-        <h2 class="catalog-search">Найдено гостиниц:<span>38</span></h2>
+        <div class="sorting-container">
+        <h2 class="catalog-search">Найдено гостиниц:<span> 38</span></h2>
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешёвые</option>
           <option value="popular">Сначала популярные</option>
           <option value="expensive">Сначала дорогие</option>
         </select>
-        <a class="card-grid-toggle" href="catalog.html?view=tile">
-          <span class="visually-hidden">Показать список</span>
-        </a>
-        <a class="card-grid-toggle" href="catalog.html?view=card">
+        <a class="card-grid-toggle card-grid-toggle-active" href="catalog.html?view=tile">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none" viewBox="0 0 16 14"><path fill="#000" d="M4 0H0v6h4zM16 0h-4v6h4zM10 0H6v6h4zM4 8H0v6h4zM16 8h-4v6h4zM10 8H6v6h4z"/></svg>
           <span class="visually-hidden">Показать плитку</span>
         </a>
-        <a class="card-grid-toggle" href="catalog.html?view=list">
-          <span class="visually-hidden">Показать карточки</span>
+
+        <a class="card-grid-toggle" href="catalog.html?view=card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none" viewBox="0 0 16 14"><path fill="#000" d="M16 12H0v2h16zM14 2v6H2V2zm2-2H0v10h16z"/></svg>
+           <span class="visually-hidden">Показать плитку</span>
         </a>
+        <a class="card-grid-toggle" href="catalog.html?view=list">
+         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none" viewBox="0 0 16 14"><path fill="#000" d="M2 0H0v2h2zM16 0H4v2h12zM2 4H0v2h2zM16 4H4v2h12zM2 8H0v2h2zM16 8H4v2h12zM2 12H0v2h2zM16 12H4v2h12z"/></svg>
+          <span class="visually-hidden">Показать список</span>
+        </a>
+</div>
       </section>
 
 
