@@ -250,18 +250,18 @@ body {
 
 }
 
-.navigation-button:hover{
+.navigation-button:hover {
   background-color: #615048;
 
 }
 
-.navigation-button:focus{
+.navigation-button:focus {
   background-color: #615048;
 
 }
 
 
-.navigation-button:active{
+.navigation-button:active {
   background-color: rgba(255, 255, 255, 0.3);
 
 }
@@ -547,17 +547,17 @@ body {
   border: none;
 }
 
-.button-search:hover{
+.button-search:hover {
   background-color: #615048;
 
 }
 
-.button-search:focus{
+.button-search:focus {
   background-color: #615048;
 
 }
 
-.button-search:active{
+.button-search:active {
   background-color: rgba(255, 255, 255, 0.3);
 
 }
@@ -649,50 +649,6 @@ body {
 }
 
 
-/*Подвал*/
-
-.page-footer {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 35px;
-  padding-top: 45px;
-  align-items: center;
-
-}
-
-.footer-social-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-}
-
-.page-footer a {
-  color: #000000;
-  text-decoration: none;
-}
-
-
-.phone-number {
-  display: block;
-  color: #000000;
-  font-size: 40px;
-  line-height: 40px;
-  justify-content: center;
-  margin: auto;
-}
-
-
-.social-img:hover {
-background-color: #68A2CA;
-}
-.social-img:focus {
-background-color: #68A2CA;
-}
-
-.social-imgr:active {
-background-color: rgb(104, 162, 202, 0.3);
-}
 
 
 /*КАТАЛОГ*/
@@ -707,6 +663,10 @@ background-color: rgb(104, 162, 202, 0.3);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 35px 70px 70px;
+}
+
+.inner-section {
+  margin-bottom: 40px;
 }
 
 .inner-header-title {
@@ -743,6 +703,16 @@ background-color: rgb(104, 162, 202, 0.3);
 
 }
 
+.breadcrumbs-link:hover {
+  opacity: 60%;
+}
+
+
+.breadcrumbs-link:active {
+  opacity: 30%;
+}
+
+
 .breadcrumbs-item {
   display: flex;
   gap: 10px;
@@ -763,14 +733,6 @@ background-color: rgb(104, 162, 202, 0.3);
 
 /* фильтры поиска жилья */
 
-.filter-columns {
-  display: flex;
-  gap: 40px 70px;
-  align-items: flex-start;
-
-}
-
-
 .filter-wrapper-right {
   justify-content: space-between;
   width: 549px;
@@ -782,8 +744,7 @@ background-color: rgb(104, 162, 202, 0.3);
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-  padding-top: 40px;
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 
 }
 
@@ -795,28 +756,72 @@ background-color: rgb(104, 162, 202, 0.3);
 }
 
 .catalog-item {
+  display: flex;
   font-size: 18px;
   line-height: 23px;
   margin-bottom: 16px;
+  gap: 16px;
 }
 
 .catalog-filter {
   display: flex;
+  flex-wrap: wrap;
   gap: 70px;
 
 }
 
+.input-checkbox {
+  display: block;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  margin: 0;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.input-checkbox:checked {
+  background-image: url("../images/v.svg");
+  background-position: center;
+  background-size: 13px 10px;
+  background-repeat: no-repeat;
+}
+
+.input-radio {
+  display: flex;
+  appearance: none;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-radio:checked::before {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  border-radius: 50%;
+
+}
 
 /* форма цены */
-.catalog-filter-title {
-  margin: 0;
-}
 
 
 .catalog-filter-group {
-  margin: auto;
+  width: 100%;
+  max-width: 150px;
+  margin: 0;
   padding: 0;
   border: none;
+}
+
+.catalog-filter-right {
+  margin-right: auto;
 }
 
 .inputs-price-container {
@@ -846,7 +851,7 @@ background-color: rgb(104, 162, 202, 0.3);
 }
 
 .field-price:active {
-border-color: #82B3D3;
+  border-color: #82B3D3;
 }
 
 .field-price:first-child {
@@ -946,7 +951,7 @@ border-color: #82B3D3;
 
 .catalog-reset-btn:hover {
 
-color: rgb(255, 255, 255, 0.3);
+  color: rgb(255, 255, 255, 0.3);
 
 }
 
@@ -955,9 +960,9 @@ color: rgb(255, 255, 255, 0.3);
 }
 
 
-.catalog-reset-btn:active{
+.catalog-reset-btn:active {
 
-color: rgb(255, 255, 255, 0.3);
+  color: rgb(255, 255, 255, 0.3);
 }
 
 /* Плитка список карточки */
@@ -1015,6 +1020,23 @@ color: rgb(255, 255, 255, 0.3);
   margin: 0;
 }
 
+.page-footer-link svg {
+  fill: #000000
+}
+
+.page-footer-link:hover svg {
+  fill: #756157;
+}
+
+.page-footer-link:active svg {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+page-footer-link:focus svg {
+  fill: #756157;
+}
+
+
 /* НАЙДЕНО ГОСТИННИЦ */
 
 .sorting-container {
@@ -1049,13 +1071,14 @@ color: rgb(255, 255, 255, 0.3);
 
 .select-control:hover {
 
-border-color: #68A2CA;
+  border-color: #68A2CA;
 }
 
 .select-control:focus {
 
-border-color: #68A2CA;
+  border-color: #68A2CA;
 }
+
 /*Кнопки каталога*/
 
 
@@ -1160,7 +1183,7 @@ border-color: #68A2CA;
   content: "";
   display: block;
   height: 17px;
- background-image: url(../images/star.svg);
+  background-image: url(../images/star.svg);
   background-repeat: space no-repeat;
   background-size: contain;
 
@@ -1237,20 +1260,22 @@ border-color: #68A2CA;
   grid-row-start: 4;
 
 }
-.hotel-details-button:hover{
+
+.hotel-details-button:hover {
   background-color: #615048;
 
 }
 
-.hotel-details-button:focus{
+.hotel-details-button:focus {
   background-color: #615048;
 
 }
 
-.hotel-details-button:active{
+.hotel-details-button:active {
   background-color: rgba(255, 255, 255, 0.3);
 
 }
+
 .catalog-form-button {
   display: flex;
   flex-direction: column;
@@ -1335,14 +1360,31 @@ border-color: #68A2CA;
 .pagination-link:hover {
   background-color: #68A2CA
 }
-.pagination-link:focus{
+
+.pagination-link:focus {
   background-color: #68A2CA
 }
 
 .pagination-link:active {
- color: rgb(255, 255, 255, 0.3);
+  color: rgb(255, 255, 255, 0.3);
 }
+
 .pagination-link-current {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.pagination-link-current:hover {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.pagination-link-current:active {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.pagination-link-current:focus {
   color: #000000;
   background-color: #f2f2f2;
 }
@@ -1360,5 +1402,147 @@ border-color: #68A2CA;
   min-width: 60px;
   height: 60px;
   padding: 16px 20px;
+
+}
+
+
+
+/*Подвал*/
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 35px;
+  padding-top: 45px;
+  align-items: center;
+
+}
+
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.page-footer a {
+  color: #000000;
+  text-decoration: none;
+}
+
+
+.phone-number {
+  display: block;
+  color: #000000;
+  font-size: 40px;
+  line-height: 40px;
+  justify-content: center;
+  margin: auto;
+}
+
+.phone-number:hover {
+  color: #756157;
+}
+
+.phone-number:active {
+  color: #756157;
+}
+
+.phone-number:focus {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.social-footer svg {
+  fill: #82B3D3;
+}
+
+.social-footer:hover svg {
+  fill: #68A2CA;
+}
+
+
+.social-footer:focus svg {
+  fill: #68A2CA;
+}
+
+.social-footer:active svg {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
+
+/* модальное окно */
+
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #ffffff;
+}
+
+.modal-auth {
+
+  width: 717px;
+  height: 576px;
+  border-radius: 30px;
+}
+
+
+.modal-close-button {
+  display: flex;
+  position: absolute;
+  padding: 0;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.modal-close-button::before {
+  display: block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-image: url(../images/cross.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  margin: auto;
+}
+
+.modal-title {
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-form {
+  display: block;
+
+}
+.modal-label-text {
+ font-family: "PT Sans";
+font-weight: 20px;
+line-height: 24px;
 
 }
