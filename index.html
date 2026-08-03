@@ -227,56 +227,56 @@
       </header>
 
       <form class="modal-form form" action="https://echo.htmlacademy.ru/" method="post">
-        <div class="modal-date modal-date-date">
-          <label class="modal-label-text" for="check-in-date">Дата заезда</label>
-          <input class="modal-input-date" type="text" id="check-in-date" name="check-in-date" value="27 апреля 2020"
-            placeholder="Выберите дату" required>
-          <p class="error-message">Мы не можем отправить вас в прошлое.</p>
+        <div class="modal-date">
+          <label class="modal-label-text" for="check-in-date">Дата заезда:</label>
+          <input class="modal-input modal-input-date" type="text" id="check-in-date" name="check-in-date"
+            value="27 апреля 2020" placeholder="Выберите дату" required>
+          <p class="message error-message">Мы не можем отправить вас в прошлое.</p>
         </div>
-        <div class="modal-date modal-date-date">
-          <label class="modal-label-text" for="check-in-date">Дата выезда</label>
-          <input class="modal-input-date" type="text" id="check-out-date" name="check-out-date" value="1 сентяюря 2023"
-            placeholder="Выберите дату" required>
-          <p class="message">На эти даты есть свободные номера.Пока есть.</p>
-          <div class="check-box-wrapper">
-          </div>
 
+        <div class="modal-date">
+          <label class="modal-label-text" for="check-out-date">Дата выезда:</label>
+          <input class="modal-input modal-input-date" type="text" id="check-out-date" name="check-out-date"
+            value="1 сентября 2023" placeholder="Выберите дату" required>
+          <p class="message">На эти даты есть свободные номера.Пока есть.</p>
+        </div>
+
+        <div class="modal-people">
+          <div class="modal-label modal-label-counter">
+            <label class="modal-label-text modal-text" for="adults-count">Взрослые:</label>
+            <button type="button" class="modal-counter-button modal-counter-min">
+              <span class="visually-hidden">Уменьшить количество гостей</span>
+            </button>
+            <input class="modal-input modal-input-counter modal-input-people" type="number" name="adults-count"
+              id="adults-count" value="2" min="1" max="99" required>
+            <button type="button" class="modal-counter-button modal-counter-plus" for="adults-count">
+              <span class="visually-hidden">Увеличить количество гостей</span>
+            </button>
+          </div>
 
           <div class="modal-label modal-label-counter">
-            <label class="modal-label-title" for="adults-count">Взрослые:</label>
-            <div class="modal-counter-controls">
-              <button type="button" class="modal-counter-button modal-counter-min">
-                <span class="visually-hidden">Уменьшить количество гостей</span>
-              </button>
-              <input class="form-input modal-input modal-input-counter" type="number" name="adults-count"
-                id="adults-count" value="2" min="1" max="99" required>
-              <button type="button" class="modal-counter-button modal-counter-plus">
-                <span class="visually-hidden">Увеличить количество гостей</span>
-              </button>
-            </div>
+            <div class="kids-wrapper">
+              <label class="modal-label-text modal-text text-kids" for="kids-count">Дети:</label>
+              <button type="button" class="modal-kids-count-inform inform"></button>
+              <span class="visually-hidden">Информация о детях</span>
+              <span class="info-text">Укажите количество детей, которые будут c вами, возраст которых от 6 до 18 лет.
+                Дети до 6 лет размещаются бесплатно.</span>
           </div>
-
-            <div class="modal-label modal-label-counter modal-label-kids">
-            <div class="modal-label-title">
-              <label for="kids-count">Дети:</label>
-              <button type="button" class="modal-kids-count-inform inform">
-                <span class="visually-hidden">Информация о детях</span>
-                <span class="info-text">Укажите количество детей, которые будут c вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-              </button>
-            </div>
-            <div class="modal-counter-control">
-              <button type="button" class="modal-counter-button modal-counter-min">
-                <span class="visually-hidden">Уменьшить количество детей</span>
-              </button>
-              <input class="form-input modal-input modal-input-counter" type="number" name="kids-count" id="kids-count" value="2" min="0" max="99" required>
-              <button type="button" class="modal-counter-button modal-counter-plus">
-                <span class="visually-hidden">Увеличить количество детей</span>
-              </button>
-            </div>
+       <div class="modal-label modal-label-counter">
+            <button type="button" class="modal-counter-button modal-counter-min">
+              <span class="visually-hidden">Уменьшить количество детей</span>
+            </button>
+            <input class="modal-input modal-input-counter modal-input-people" type="number" name="kids-count" id="kids-count" value="2"
+              min="0" max="99" required>
+            <button type="button" class="modal-counter-button modal-counter-plus" for="kids-count">
+              <span class="visually-hidden">Увеличить количество детей</span>
+            </button>
           </div>
-<button class="find" type="submit">Найти</button>
-
         </div>
+         </div>
+
+        <button class="find-button" type="submit">Найти</button>
+
       </form>
     </div>
   </div>
