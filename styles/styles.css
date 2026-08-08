@@ -1483,6 +1483,12 @@ page-footer-link:focus svg {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
+/*
+.modal-container-close {
+  display: none;
+}
+ */
+
 .modal {
   position: relative;
   margin: auto;
@@ -1538,14 +1544,11 @@ page-footer-link:focus svg {
 
 
 .modal-label-text {
-  display: block;
-  width: 123px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   text-transform: capitalize;
   padding: 12px 0;
-  grid-row: 1/3;
 }
 
 .modal-input {
@@ -1559,6 +1562,7 @@ page-footer-link:focus svg {
   border-radius: 4px;
   padding: 12px 20px;
   width: 31px;
+
 
 }
 
@@ -1591,13 +1595,6 @@ page-footer-link:focus svg {
 
 }
 
-.info-text {
-  font-size: 16px;
-  line-height: 20px;
-  background-color: #333333;
-  color: #ffffff;
-  display: none;
-}
 
 .find-button {
   display: block;
@@ -1622,15 +1619,13 @@ page-footer-link:focus svg {
 }
 
 .modal-people {
-  display: flex;
-  justify-content: space-between;
-  gap: 88px;
+   display: flex;
+
 
 }
 
 .modal-label {
   display: flex;
-
 }
 
 
@@ -1640,67 +1635,121 @@ page-footer-link:focus svg {
   height: 48px;
   padding: 14px 10px;
   border: none;
+  cursor: pointer;
 
 }
+
 .modal-counter-min {
   border-radius: 4px 0 0 4px;
 }
+
 .modal-counter-plus {
- border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
 
 }
+
 .modal-counter-min::before {
+  display: block;
   content: "";
   background-image: url("../images/min.svg");
-  background-color: rgba(17, 97, 87, 0.3);
-  background-repeat: no-repeat;
+  color: currentColor;
+  opacity: 0.3;
   background-position: center;
   width: 2px;
   height: 14px;
+  transform: rotate(90deg);
+  margin: auto;
+}
+.modal-counter-plus::before{
+ display: block;
+  content: "";
+  background-image: url("../images/max.svg");
+ color: currentColor;
+  opacity: 0.3;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  margin: auto;
 
 }
-
-
 .modal-input-people {
   width: 31px;
   height: 48px;
   list-style: none;
 }
 
-.inform {
+
+.tooltip {
+  display: block;
+  position: relative;
+  margin: 0;
+}
+
+.info-text {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #333333;
+  color: #ffffff;
+  width: 256px;
+ padding: 20px 22px 23px 22px;
+ transform: translateX(-50%);
+border-radius: 10px;
+text-align: initial;
+visibility: hidden;
+opacity: 0;
+}
+
+.tooltip-text::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 10px solid #333333;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-style: none;
+  transform: translateX(-50%);
+}
+
+
+
+.tooltip-button {
   display: block;
   background-color: #83B3D3;
   border-radius: 50%;
   width: 26px;
   height: 26px;
   border: none;
-  background-repeat: no-repeat;
+  background-image: url("../images/!.svg");
   background-position: center;
-
-
-}
-
-/* не вставляется
-.inform::before {
-  content: "";
-  background-image: url("../images/kidsitem.svg");
-
-    width: 20px;
-    height: 20px;
-    background-color: #ffffff;
-}
-
- иконка */
-
-
-.text-kids {
-  width: 65px;
+  background-repeat: no-repeat;
+  padding: 3px;
+  margin-left: 10px;
+  margin-right: 46px;
 
 }
 
-.kids-wrapper {
-  display: flex;
-  padding-right: 36px;
+.tooltip-button:hover {
+  background-color: var(--button-light-hover);
+}
+
+.tooltip-button:hover + .tooltip-text,
+.tooltip-button:focus-visible + .tooltip-text {
+  display: block;
+}
+
+.tooltip-button:focus-visible {
+  background-color: var(--button-light-hover);
+  outline: var(--browser-outline);
+}
+
+.tooltip-button:active {
+  background-color: var(--button-light);
 }
 
 .find-button {
