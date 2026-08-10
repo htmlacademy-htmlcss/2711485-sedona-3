@@ -244,7 +244,6 @@ body {
   width: 160px;
   height: 36px;
   padding: 8px 34px;
-  margin: 0 auto;
   border-radius: 4px;
   margin-left: auto;
 
@@ -273,9 +272,10 @@ body {
   display: block;
   color: #ffffff;
   background-color: #253239;
-  background-image: url("../images/mainpic.jpeg");
-  background-size: cover;
+  background-image: url("../images/indexmain.svg"), url("../images/mainpic.jpeg");
+  background-size: 100% auto, cover;
   background-repeat: no-repeat;
+  background-position: bottom, center;
   text-align: center;
   padding: 51px 0 82px;
   margin: 0 auto;
@@ -284,6 +284,10 @@ body {
 
 /*Список преимуществ*/
 
+.advantages {
+
+  padding-top: 36px;
+}
 
 .advantages-title {
   font-size: 30px;
@@ -291,6 +295,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 28px;
 }
 
 
@@ -302,10 +307,11 @@ body {
 }
 
 .advantages-wrapper {
-  width: 400px;
+  max-width: 400px;
   min-height: 385px;
   margin: 0 auto;
-  padding: 102px 85px
+padding: 102px 80px;
+
 }
 
 .advantages-picture {
@@ -332,8 +338,10 @@ body {
   text-align: center;
   text-transform: uppercase;
   width: 400px;
-  height: 385px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 102px 75px;
 }
 
 .advantages-sedona {
@@ -345,6 +353,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 30px;
   margin-top: 0;
+
 }
 
 
@@ -400,7 +409,8 @@ body {
   line-height: 21px;
   text-align: center;
   text-transform: none;
-  margin: 0 auto;
+  margin: 0;
+  max-width: 230px;
 }
 
 .advantages-description-title {
@@ -423,7 +433,7 @@ body {
   text-transform: uppercase;
   padding: 0;
   margin-top: 64px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .description-call {
@@ -440,17 +450,18 @@ body {
 
 
 .recommend-list {
-  display: flex;
-  margin: 0;
-  padding: 0;
   list-style: none;
+  margin-top: 34px;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .recommend-item {
   background-color: #83B3D31F;
   height: 385px;
   margin: 0;
-  padding: 81px 85px;
+  padding: 89px 85px;
 
 }
 
@@ -502,6 +513,10 @@ body {
   margin: 0;
   margin-top: 102px;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+width: 230px;
 }
 
 /*Заинтересовались?*/
@@ -1475,32 +1490,30 @@ page-footer-link:focus svg {
 
 .modal-container {
   position: fixed;
+  height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
   display: flex;
-  width: 100%;
-  height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
+
 }
 
-/*
 .modal-container-close {
   display: none;
 }
- */
 
-.modal {
-  position: relative;
-  margin: auto;
-  padding: 64px 70px;
+
+.modal-dialog {
   background-color: #ffffff;
+  border-radius: 30px;
+  padding: 64px 70px;
+  border: 0;
 }
 
-.modal-auth {
 
-  width: 717px;
-  height: 576px;
-  border-radius: 30px;
+.modal-dialog::backdrop {
+  background-color: rgba(242, 242, 242, 0.8);
 }
 
 
@@ -1518,6 +1531,24 @@ page-footer-link:focus svg {
   background-color: #f2f2f2;
   border-radius: 50%;
 }
+
+.modal-close-button:disabled {
+  opacity: 15%;
+}
+
+.modal-close-button:not(:disabled):hover {
+  background-color: #e5e5e5;
+}
+
+.modal-close-button:not(:disabled):focus {
+  background-color: #e5e5e5;
+
+}
+
+.modal-close-button:not(:disabled):active::before {
+  opacity: 30%;
+}
+
 
 .modal-close-button::before {
   display: block;
@@ -1549,6 +1580,24 @@ page-footer-link:focus svg {
   font-weight: 700;
   text-transform: capitalize;
   padding: 12px 0;
+  grid-row: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-text {
+  margin-right: 46px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 137px;
+  word-break: break-all;
+}
+
+.text-kids {
+  margin-right: 10px;
+  flex-wrap: wrap;
+  max-width: 137px;
+  word-break: break-all;
 }
 
 .modal-input {
@@ -1563,15 +1612,21 @@ page-footer-link:focus svg {
   padding: 12px 20px;
   width: 31px;
 
-
 }
 
 .modal-input-date {
+  background-color: #f2f2f2;
   background-image: url("../images/icondate.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
   padding-right: 50px;
   width: 440px;
+}
+
+.modal-input-counter::-webkit-outer-spin-button,
+::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .message {
@@ -1592,6 +1647,8 @@ page-footer-link:focus svg {
   padding-left: 0;
   padding-right: 0;
   text-align: center;
+  -moz-appearance: textfield;
+  appearance: textfield;
 
 }
 
@@ -1606,12 +1663,27 @@ page-footer-link:focus svg {
   color: #ffffff;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.find-button:hover {
+  background-color: rgb(104, 163, 202);
 
 }
 
+.find-button:focus {
+  background-color: #68a2ca;
+}
+
+.find-button:active {
+  background-color: rgb(104, 163, 202);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
 .modal-date {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 123px 1fr;
   grid-template-rows: auto 1fr;
   gap: 0 14px;
   min-height: 96px;
@@ -1619,12 +1691,13 @@ page-footer-link:focus svg {
 }
 
 .modal-people {
-   display: flex;
-
+  display: flex;
+  justify-content: space-between;
 
 }
 
 .modal-label {
+  position: relative;
   display: flex;
 }
 
@@ -1660,11 +1733,12 @@ page-footer-link:focus svg {
   transform: rotate(90deg);
   margin: auto;
 }
-.modal-counter-plus::before{
- display: block;
+
+.modal-counter-plus::before {
+  display: block;
   content: "";
   background-image: url("../images/max.svg");
- color: currentColor;
+  color: currentColor;
   opacity: 0.3;
   background-position: center;
   background-repeat: no-repeat;
@@ -1673,35 +1747,36 @@ page-footer-link:focus svg {
   margin: auto;
 
 }
+
 .modal-input-people {
-  width: 31px;
-  height: 48px;
-  list-style: none;
+  line-height: 20px;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 0;
+
 }
 
 
-.tooltip {
-  display: block;
-  position: relative;
-  margin: 0;
-}
 
 .info-text {
-  display: block;
-  font-size: 16px;
-  line-height: 20px;
   background-color: #333333;
-  color: #ffffff;
+  position: absolute;
+  top: calc(100%);
+  z-index: 1;
+  left: -115px;
+  box-sizing: border-box;
   width: 256px;
- padding: 20px 22px 23px 22px;
- transform: translateX(-50%);
-border-radius: 10px;
-text-align: initial;
-visibility: hidden;
-opacity: 0;
+  padding: 20px 22px 23px 22px;
+  font-size: 1rem;
+  line-height: 20px;
+  text-align: initial;
+  color: #ffffff;
+  border-radius: 10px;
+  display: none;
+
 }
 
-.tooltip-text::before {
+.info-text::before {
   content: "";
   display: block;
   position: absolute;
@@ -1713,10 +1788,8 @@ opacity: 0;
   border-left-color: transparent;
   border-right-color: transparent;
   border-top-style: none;
-  transform: translateX(-50%);
+  transform: translateX(-50%)
 }
-
-
 
 .tooltip-button {
   display: block;
@@ -1729,27 +1802,22 @@ opacity: 0;
   background-position: center;
   background-repeat: no-repeat;
   padding: 3px;
-  margin-left: 10px;
-  margin-right: 46px;
-
+  margin: auto 46px auto 0;
+  cursor: pointer;
 }
 
 .tooltip-button:hover {
-  background-color: var(--button-light-hover);
+  background-color: #83B3D3;
 }
 
-.tooltip-button:hover + .tooltip-text,
-.tooltip-button:focus-visible + .tooltip-text {
+.tooltip-button:hover + .info-text,
+.tooltip-button:focus + .info-text {
   display: block;
 }
 
-.tooltip-button:focus-visible {
-  background-color: var(--button-light-hover);
-  outline: var(--browser-outline);
-}
 
 .tooltip-button:active {
-  background-color: var(--button-light);
+  background-color: #83B3D3;
 }
 
 .find-button {
@@ -1761,6 +1829,6 @@ opacity: 0;
   text-transform: uppercase;
   width: 577px;
   height: 60px;
-  margin-top: 48px;
+  margin: 48px auto 0;
   padding: 0;
 }
