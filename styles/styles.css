@@ -307,10 +307,10 @@ body {
 }
 
 .advantages-wrapper {
-  max-width: 400px;
+  width: 400px;
   min-height: 385px;
   margin: 0 auto;
-padding: 102px 80px;
+  padding: 102px 80px;
 
 }
 
@@ -338,10 +338,10 @@ padding: 102px 80px;
   text-align: center;
   text-transform: uppercase;
   width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 102px 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 112px 75px;
 }
 
 .advantages-sedona {
@@ -410,7 +410,7 @@ padding: 102px 80px;
   text-align: center;
   text-transform: none;
   margin: 0;
-  max-width: 230px;
+
 }
 
 .advantages-description-title {
@@ -443,7 +443,7 @@ padding: 102px 80px;
   text-align: center;
   padding: 0;
   margin-top: 0;
-  margin-bottom: 64px;
+  margin-bottom: 68px;
 }
 
 /*список рекомендаций*/
@@ -451,7 +451,7 @@ padding: 102px 80px;
 
 .recommend-list {
   list-style: none;
-  margin-top: 34px;
+  margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
@@ -461,7 +461,7 @@ padding: 102px 80px;
   background-color: #83B3D31F;
   height: 385px;
   margin: 0;
-  padding: 89px 85px;
+  padding: 85px 85px;
 
 }
 
@@ -512,11 +512,11 @@ padding: 102px 80px;
   text-transform: uppercase;
   margin: 0;
   margin-top: 102px;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-width: 230px;
+  width: 230px;
 }
 
 /*Заинтересовались?*/
@@ -649,21 +649,27 @@ width: 230px;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
-  width: 700px;
+  width: 684px;
 }
 
 .field-email {
 
   padding: 12px 20px;
   font-family: inherit;
-  color: #F2F2F2;
+  background-color: #f2f2f2;
   font-size: 18px;
   line-height: 24px;
-  width: 452px;
+  width: 458px;
   height: 52px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border: none;
 }
 
-
+.field-email::placeholder {
+  opacity: 1;
+color:rgb(0, 0, 0, 0.6)
+}
 
 
 /*КАТАЛОГ*/
@@ -1007,8 +1013,8 @@ width: 230px;
   background-size: 47px 40px;
   padding-left: 10px;
   padding-right: 10px;
-  width: 44px;
-  height: 24px;
+  width: 47px;
+  height: 40px;
 
 }
 
@@ -1237,7 +1243,6 @@ page-footer-link:focus svg {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
-  width: 235px;
   height: 52px;
   padding: 8px 50px;
   border-radius: 0 4px 4px 0;
@@ -1428,7 +1433,7 @@ page-footer-link:focus svg {
   display: flex;
   justify-content: space-between;
   padding-bottom: 35px;
-  padding-top: 45px;
+  padding-top: 36px;
   align-items: center;
 
 }
