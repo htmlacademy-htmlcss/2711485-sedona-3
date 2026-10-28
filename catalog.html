@@ -63,7 +63,7 @@
       <main class="main container main-index" data-test="main">
         <div class="page-container-catalog">
           <section class="inner-section">
-            <h1 class="inner-header-title">Гостинницы Седоны</h1>
+            <h1 class="inner-header-title">Гостиницы Седоны</h1>
 
             <!-- Хлебные крошки -->
 
@@ -91,33 +91,31 @@
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
                 <ul class="catalog-products-list catalog-filter-list">
                   <li class="catalog-item">
-                    <input
+                    <label class="control" for="pool">Бассейн  <input
                       class="input-checkbox"
                       type="checkbox"
                       name="pool"
-                      id="pool"
-                    />
-                    <label class="control" for="pool">Бассейн</label>
+                      id="pool"></label>
                   </li>
                   <li class="catalog-item">
-                    <input
+                    <label class="control" for="parking">Парковка
+                       <input
                       class="input-checkbox"
                       type="checkbox"
                       name="parking"
                       id="parking"
-                      checked
-                    />
-                    <label class="control" for="parking">Парковка</label>
+                      checked>
+                    </label>
                   </li>
                   <li class="catalog-item">
-                    <input
+                    <label class="control" for="wi-fi">Wi-Fi
+                       <input
                       class="input-checkbox"
                       type="checkbox"
                       name="wi-fi"
                       id="wi-fi"
-                      checked
-                    />
-                    <label class="control" for="wi-fi">Wi-Fi</label>
+                      checked>
+                    </label>
                   </li>
                 </ul>
               </fieldset>
@@ -128,35 +126,35 @@
                 <legend class="catalog-filter-title">Тип Жилья:</legend>
                 <ul class="catalog-products-list">
                   <li class="catalog-item">
-                    <input
+                      <label class="control" for="hotel">Гостинница
+                      <input
                       class="input-radio"
                       type="radio"
                       name="booking-type"
                       value="hotel"
                       id="hotel"
-                      checked
-                    />
-                    <label class="control" for="hotel">Гостинница</label>
+                      checked>
+                    </label>
                   </li>
                   <li class="catalog-item">
-                    <input
+                    <label class="control" for="motel">Мотель
+                       <input
                       class="input-radio"
                       type="radio"
                       name="booking-type"
                       value="motel"
-                      id="motel"
-                    />
-                    <label class="control" for="motel">Мотель</label>
+                      id="motel">
+                    </label>
                   </li>
                   <li class="catalog-item">
-                    <input
+                    <label class="control" for="appartments">Апартаменты
+                      <input
                       class="input-radio"
                       type="radio"
                       name="booking-type"
                       value="appartments"
-                      id="appartments"
-                    />
-                    <label class="control" for="appartments">Апартаменты</label>
+                      id="appartments">
+                    </label>
                   </li>
                 </ul>
               </fieldset>
@@ -399,9 +397,9 @@
         <!-- Подписка на рассылку -->
 
         <section class="section-mail coll" data-test="mail">
-          <h2 class="mail-title">Подпишитесь на рассылку?</h2>
+          <h2 class="mail-title">Подпишитесь на рассылку</h2>
           <p class="mail-text">
-            Только полезная информация и никакого спама, честное бойскаутское!
+            Только полезная информация и никакого спама,<br>честное бойскаутское!
           </p>
           <form
             class="subscribe-mail"

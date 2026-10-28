@@ -276,7 +276,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 28px;
-  padding: 0 290px 0 290px;
+  padding: 0 286px;
 }
 
 .advantages-item {
@@ -529,6 +529,8 @@ body {
   margin: 0 auto;
   padding: 8px 50px;
   border: none;
+  width: 376px;
+  min-height: 52px;
 }
 
 .button-search:hover {
@@ -622,7 +624,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   width: 458px;
-  height: 52px;
+  min-height: 52px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   border: none;
@@ -643,7 +645,7 @@ body {
   background-color: #253239;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 35px 70px 70px;
+  padding: 35px 70px 57px;
 }
 
 .inner-section {
@@ -717,6 +719,7 @@ body {
   font-weight: 700;
   line-height: 24px;
   margin-bottom: 32px;
+  padding: 0;
 }
 
 .catalog-products-list {
@@ -733,18 +736,6 @@ body {
   gap: 16px;
 }
 
-.catalog-item:hover {
-  opacity: 0.6;
-}
-
-.catalog-item:focus {
-  color: rgba(255, 255, 255);
-}
-
-.catalog-item:active {
-  opacity: 0.3;
-}
-
 .catalog-filter {
   display: flex;
   flex-wrap: wrap;
@@ -759,6 +750,9 @@ body {
   margin: 0;
   background-color: #ffffff;
   border-radius: 4px;
+  position: absolute;
+  top: 2px;
+  left: 0;
 }
 
 .input-checkbox:checked {
@@ -778,7 +772,9 @@ body {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  flex-shrink: 1;
+  position: absolute;
+  top: 2px;
+  left: 0;
 }
 
 .input-radio:checked::before {
@@ -788,6 +784,24 @@ body {
   height: 10px;
   background-color: #3f5e72;
   border-radius: 50%;
+}
+
+
+.control {
+  position: relative;
+  padding-left: 36px;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:focus {
+  color: rgba(255, 255, 255);
+}
+
+.control:active {
+  opacity: 0.3;
 }
 
 /* форма цены */
@@ -830,11 +844,17 @@ body {
 }
 
 .field-price:focus {
+  outline: 3px solid #83b3d3;
   background-color: #e5e5e5;
 }
 
-.field-price:active {
-  border-color: #e5e5e5;
+.field-price::-webkit-outer-spin-button,
+.field-priced::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.field-price[type="number"] {
+  appearance: textfield;
 }
 
 .price-right {
@@ -865,6 +885,7 @@ body {
   position: relative;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
 }
 
 .range-toggle {
@@ -875,6 +896,7 @@ body {
   border: none;
   border-radius: 5px;
   top: -8px;
+  cursor: pointer;
 }
 
 .price-toggle-min {
@@ -882,7 +904,24 @@ body {
 }
 
 .price-toggle-max {
-  right: -10px;
+  right: 0;
+}
+
+.price-toggle-min:hover,
+.price-toggle-max:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.price-toggle-min:focus-visible,
+.price-toggle-max:focus-visible {
+  outline: 3px solid #83b3d3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.price-toggle-min:active,
+.price-toggle-max:active {
+  outline: 2px solid #83b3d3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .range-bar {
@@ -915,7 +954,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   margin-bottom: 32px;
-  width: 100%;
+  max-width: 191px;
 }
 
 .catalog-submit-btn:hover {
@@ -938,6 +977,7 @@ body {
   line-height: 20px;
   padding: 8px 50px;
   background-color: transparent;
+  max-width: 191px;
 }
 
 .catalog-reset-btn:hover {
@@ -956,7 +996,8 @@ body {
 
 .card-grid-toggle {
   display: flex;
-  margin-right: 8px;
+  margin-left: 8px;
+  margin-top: -24px;
   width: 48px;
   height: 48px;
   justify-content: center;
@@ -965,14 +1006,23 @@ body {
   border: 2px solid #e5e5e5;
 }
 
+.card-grid-toggle:hover {
+  border-color: #000000;
+}
+
+.card-grid-toggle:focus-visible {
+  outline: none;
+  border-color: #68a2ca;
+}
+
 .card-grid-toggle-active {
-  border: 2px solid #000000;
+  border-color: #000000;
 }
 
 .social-footer {
   display: block;
   background-size: 47px 40px;
-  padding: 15px 10px 15px 10px;
+  padding: 9px 13px;
   width: 47px;
   height: 40px;
   justify-content: center;
@@ -1022,35 +1072,47 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 50px;
-  margin-bottom: 40px;
+  margin-top: 55px;
+  margin-bottom: 22px;
 }
 
 .select-control {
-  width: 292px;
+  margin-right: 61px;
+  margin-left: 20px;
+  margin-top: -22px;
+  padding-left: 14px;
+  min-width: 292px;
   height: 49px;
-  font-family: inherit;
+  background-image: url("../images/select-control.svg");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  color: #333333;
-  background-color: transparent;
+  appearance: none;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
-  padding-left: 20px;
-  margin-right: 70px;
+  background-color: #ffffff;
+  color: #333333;
+  flex-shrink: 0;
 }
 
 .select-control:hover {
   border-color: #68a2ca;
 }
 
-.select-control:focus {
+.select-control:focus-visible {
   border-color: #68a2ca;
+  outline: 1px solid #68a2ca;
 }
 
-.select-control:active {
-  border-color: #e5e5e5;
+.select-control:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.3);
 }
+
 
 /*Кнопки каталога*/
 
@@ -1119,7 +1181,7 @@ body {
   text-decoration: none;
 }
 
-.product-card a {
+.product-card-link {
   text-decoration: none;
   grid-column: 1/-1;
 }
@@ -1213,8 +1275,7 @@ body {
   min-height: 36px;
   padding: 8px 26px;
   border: 0;
-  grid-column-start: 2;
-  grid-row-start: 4;
+  grid-column: auto;
 }
 
 .hotel-details-button:hover {
@@ -1248,8 +1309,7 @@ body {
   text-transform: uppercase;
   width: 140px;
   min-height: 36px;
-  grid-column-start: 2;
-  grid-row-start: 4;
+  grid-column: auto;
 }
 
 .hotel-add-favorites:hover {
@@ -1373,7 +1433,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding-bottom: 35px;
-  padding-top: 22px;
+  padding-top: 29px;
   align-items: center;
 }
 
